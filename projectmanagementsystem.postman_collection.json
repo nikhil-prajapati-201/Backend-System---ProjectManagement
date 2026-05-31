@@ -1,0 +1,416 @@
+{
+  "info": {
+    "_postman_id": "0e975e04-72bf-4652-8b6a-a14ff102755a",
+    "name": "projectmanagementsystem",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48100328",
+    "_collection_link": "https://go.postman.co/collection/48100328-0e975e04-72bf-4652-8b6a-a14ff102755a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Project-API",
+      "item": [
+        {
+          "name": "add-project",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"projectName\":\"E-Commerce\",\r\n  \"description\":\"Shopping Website\",\r\n  \"startDate\":\"2026-05-01\",\r\n  \"endDate\":\"2026-08-01\",\r\n  \"status\":\"ACTIVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/projects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll-projects",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "get-project",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "update-project",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"projectName\":\"E-Commerce\",\r\n  \"description\":\"Shopping Website\",\r\n  \"startDate\":\"2025-05-01\",\r\n  \"endDate\":\"2025-08-01\",\r\n  \"status\":\"ACTIVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/projects/update/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "projects",
+                "update",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-project",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/projects/delete/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "projects",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "TeamMember-API",
+      "item": [
+        {
+          "name": "add-TeamMember",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"name\":\"Nikhil Prajapati\",\r\n   \"email\":\"nikhil@gmail.com\",\r\n   \"role\":\"Backend Developer\",\r\n   \"department\":\"Engineering\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/members/add",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "members",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getALL-TeamMember",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJuaWtoaWxAZ21haWwuY29tIiwiaWF0IjoxNzgwMjMxODA3LCJleHAiOjE3ODAzMTgyMDd9.RSdwceHtwR040kbiXv-kVdgNDPoXZm-arCxhUVMtSxzw9fYt2QgOAHzPeRu5QUBS",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/members/getAll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "members",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update-TeamMeber",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Priya Patel\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"role\": \"Solution Architect\",\r\n  \"department\": \"Development\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/members/update/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "members",
+                "update",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-TeamMembers",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3ODAyMzQ1NjUsImV4cCI6MTc4MDMwNjk2NX0.6ohI409mybBYUBIOXl_mjF8IMIpN5sly0TW6-JoxM_IHwMQ71AofrNm25AIjI0ys",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/members/delete/14",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "members",
+                "delete",
+                "14"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Task-API",
+      "item": [
+        {
+          "name": "add-Task",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"taskTitle\":\"Login API\",\r\n  \"description\":\"Create Login API\",\r\n  \"priority\":\"HIGH\",\r\n  \"status\":\"PENDING\",\r\n  \"dueDate\":\"2026-06-30\",\r\n  \"projectId\":2,\r\n  \"memberId\":1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/tasks/add",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "tasks",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll-Tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/tasks/getAll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "tasks",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-Tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/tasks/get/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "tasks",
+                "get",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update-Tasks",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"taskTitle\": \"Account Service\",\r\n  \"description\": \"Implement account management APIs with Real Time examples\",\r\n  \"priority\": \"HIGH\",\r\n  \"status\": \"IN_PROGRESS\",\r\n  \"dueDate\": \"2026-07-15\",\r\n  \"projectId\": 2,\r\n  \"memberId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/tasks/update/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "tasks",
+                "update",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-Tasks",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/tasks/delete/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "tasks",
+                "delete",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth-API",
+      "item": [
+        {
+          "name": "user-register",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"username\":\"nikhil\",\r\n   \"email\":\"nikhil@gmail.com\",\r\n   \"password\":\"123456\",\r\n   \"role\":\"ADMIN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
