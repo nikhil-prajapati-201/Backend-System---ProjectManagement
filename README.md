@@ -57,7 +57,11 @@ The application follows a layered architecture and implements JWT Authentication
 
 ### Backend
 
+<<<<<<< HEAD
 * Java 21
+=======
+* Java 17
+>>>>>>> f1d95b1d28f6bd9e0b971c7c9e9f34db00adc663
 * Spring Boot
 * Spring Security
 * Spring Data JPA
@@ -298,6 +302,16 @@ or run ProjectManagementSystemApplication.java from IDE.
 
 ---
 
+<<<<<<< HEAD
+=======
+## Future Enhancements
+
+* Pagination & Sorting
+* Docker Support
+* Unit Testing
+* Email Notifications
+* Cloud Deployment
+>>>>>>> f1d95b1d28f6bd9e0b971c7c9e9f34db00adc663
 
 ---
 
